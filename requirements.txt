@@ -1,0 +1,7 @@
+pryogram
+yt-dlp
+requests
+tgcrypto
+ffmpeg
+youtube-dl
+hachoir
