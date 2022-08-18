@@ -1,4 +1,4 @@
-pryogram
+pyrogram
 requests
 tgcrypto
 ffmpeg
