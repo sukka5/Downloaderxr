@@ -66,19 +66,12 @@ async def echo(bot, update):
                 l = entity.length
                 url = url[o:o + l]
     if Config.HTTP_PROXY != "":
-        command_to_exec = [
-            "yt-dlp",
-            "--no-warnings",
-            "--allow-dynamic-mpd",
-            "-j",
-            url,
-            "--proxy", Config.HTTP_PROXY
-        ]
+        pass
     else:
         command_to_exec = [
-            "yt-dlp",
+            "youtube-dl",
             "--no-warnings",
-            "--allow-dynamic-mpd",
+            "--youtube-skip-dash-manifest",
             "-j",
             url
         ]
