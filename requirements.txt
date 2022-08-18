@@ -1,5 +1,4 @@
 pryogram
-yt-dlp
 requests
 tgcrypto
 ffmpeg
