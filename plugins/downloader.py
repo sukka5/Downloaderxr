@@ -83,16 +83,14 @@ async def youtube_dl_call_back(bot, update):
         # command_to_exec = ["yt-dlp", "-f", youtube_dl_format, "--hls-prefer-ffmpeg", "--recode-video", "mp4", "-k", youtube_dl_url, "-o", download_directory]
         minus_f_format = youtube_dl_format
         command_to_exec = [
-            "yt-dlp",
+            "youtube-dl",
             "-c",
             "--max-filesize", str(Config.TG_MAX_FILE_SIZE),
             "--embed-subs",
             "-f", minus_f_format,
-            "--bidi-workaround",
-            youtube_dl_url,
+            "--hls-prefer-ffmpeg", youtube_dl_url,
             "-o", download_directory
         ]
-
     command_to_exec.append("--no-warnings")
     # command_to_exec.append("--quiet")
     logger.info(command_to_exec)
